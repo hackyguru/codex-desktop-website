@@ -13,11 +13,6 @@ export default function Home() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleDownload = () => {
-    // Placeholder for download functionality
-    console.log("Download clicked");
-  };
-
   const handleAbout = () => {
     console.log("About clicked");
   };
@@ -106,7 +101,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black overflow-x-hidden relative">
       {/* Hexagon Background */}
-      <div className="absolute inset-0 z-0 pointer-events-auto">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <Squares
           direction="diagonal"
           speed={0.5}
@@ -181,15 +176,17 @@ export default function Home() {
 
             {/* Right Side - Download Button (Desktop) & Mobile Menu Button */}
             <div className="flex items-center">
-              {/* Desktop Download Button */}
-              <div className="hidden md:flex items-center">
-                <button
-                  onClick={handleDownload}
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
-                >
-                  Download for macOS
-                </button>
-              </div>
+                             {/* Desktop Download Button */}
+               <div className="hidden md:flex items-center">
+                 <a
+                   href="https://github.com/hackyguru/codex-desktop/releases"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-4 py-2 rounded-lg text-sm font-semibold transition-colors inline-block"
+                 >
+                   Download for macOS
+                 </a>
+               </div>
 
               {/* Mobile menu button */}
               <div className="md:hidden">
@@ -208,7 +205,7 @@ export default function Home() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-full bg-black/95 backdrop-blur-md z-40 flex flex-col justify-center items-center">
+            <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-full bg-black/95 backdrop-blur-md z-[60] flex flex-col justify-center items-center">
               <div className="flex flex-col space-y-8 text-center">
                 <Link
                   href="/about"
@@ -226,15 +223,15 @@ export default function Home() {
                 >
                   Join Community
                 </button>
-                <button
-                  onClick={() => {
-                    handleDownload();
-                    setIsMenuOpen(false);
-                  }}
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-xl font-semibold transition-colors"
+                <a
+                  href="https://github.com/hackyguru/codex-desktop/releases"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-xl font-semibold transition-colors inline-block text-center"
                 >
                   Download for macOS
-                </button>
+                </a>
               </div>
               
               {/* Close button */}
@@ -253,7 +250,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-36 md:pt-40 lg:pt-44 h-screen relative z-10 pointer-events-none p-2 sm:p-4 md:p-6 lg:p-8">
+      <section className="pt-32 sm:pt-36 md:pt-40 lg:pt-44 h-screen relative z-10 p-2 sm:p-4 md:p-6 lg:p-8">
         <div className="w-full h-full relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden">
           {/* Mobile Layout - Stack Content */}
           <div className="lg:hidden flex flex-col h-full min-h-[600px]">
@@ -274,13 +271,15 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="flex flex-col gap-3 sm:gap-4 pointer-events-auto">
-                <button
-                  onClick={handleDownload}
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25"
+              <div className="flex flex-col gap-3 sm:gap-4 relative z-20">
+                <a
+                  href="https://github.com/hackyguru/codex-desktop/releases"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 text-center inline-block"
                 >
                   Download for macOS
-                </button>
+                </a>
                 <button className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 bg-transparent">
                   Watch Demo
                 </button>
@@ -288,7 +287,7 @@ export default function Home() {
             </div>
             
             {/* Mobile CardSwap - Smaller and Bottom */}
-            <div className="flex-shrink-0 h-64 sm:h-80 relative pointer-events-auto">
+            <div className="flex-shrink-0 h-64 sm:h-80 relative z-0">
               <CardSwap
                 width={350}
                 height={250}
@@ -407,13 +406,15 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pointer-events-auto">
-                <button
-                  onClick={handleDownload}
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25"
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 relative z-20">
+                <a
+                  href="https://github.com/hackyguru/codex-desktop/releases"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 text-center inline-block"
                 >
                   Download for macOS
-                </button>
+                </a>
                 <button className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 bg-transparent">
                   Watch Demo
                 </button>
@@ -421,7 +422,7 @@ export default function Home() {
             </div>
 
             {/* Desktop CardSwap Component */}
-            <div className="absolute bottom-0 right-0 w-full h-full pointer-events-auto">
+            <div className="absolute bottom-0 right-0 w-1/2 h-full z-0">
               <CardSwap
                 width={900}
                 height={600}
@@ -533,7 +534,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="relative z-10 pointer-events-none p-4 sm:p-6 md:p-8 pb-8">
+      <section className="relative z-10 p-4 sm:p-6 md:p-8 pb-8">
         <div className="w-full">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pointer-events-auto">
@@ -612,7 +613,7 @@ export default function Home() {
         </section>
 
         {/* Features Grid Section */}
-        <section className="relative z-10 pointer-events-none p-2 sm:p-4 md:p-6 lg:p-8 pb-8">
+        <section className="relative z-10 p-2 sm:p-4 md:p-6 lg:p-8 pb-8">
           
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 pointer-events-auto">
@@ -694,8 +695,8 @@ export default function Home() {
         </section>
 
         {/* Roadmap Section */}
-        <section className="relative z-10 pointer-events-none p-2 sm:p-4 md:p-6 lg:p-8 pb-4 sm:pb-8">
-          <div className="w-full relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden pointer-events-auto">
+        <section className="relative z-10 p-2 sm:p-4 md:p-6 lg:p-8 pb-4 sm:pb-8">
+                      <div className="w-full relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden">
             <div className="p-4 sm:p-6 md:p-8 lg:p-12">
               <div className="max-w-6xl mx-auto">
                 
@@ -809,8 +810,8 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="relative z-10 pointer-events-none p-4 sm:p-6 md:p-8 pb-8">
-          <div className="w-full relative bg-[#0a0a0a] rounded-3xl border border-gray-800/50 overflow-hidden pointer-events-auto">
+        <footer className="relative z-10 p-4 sm:p-6 md:p-8 pb-8">
+                      <div className="w-full relative bg-[#0a0a0a] rounded-3xl border border-gray-800/50 overflow-hidden">
             <div className="p-8 sm:p-12 md:p-16 lg:p-20">
               <div className="max-w-6xl mx-auto">
                 
