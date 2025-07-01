@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Squares from "../components/Squares";
+import SEO from "../components/SEO";
 
 export default function About() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,8 +25,36 @@ export default function About() {
   };
 
   return (
-    <div className="h-screen max-h-screen bg-black overflow-hidden relative">
-      {/* Hexagon Background */}
+    <>
+      <SEO 
+        title="About CodexDesktop - The Future of Decentralized File Storage"
+        description="Learn about CodexDesktop's mission to revolutionize file storage with Web3 technology, military-grade encryption, and decentralized networks. Discover how we're putting data ownership back in your hands."
+        keywords="about codex desktop, decentralized storage mission, web3 file storage, privacy-first storage, data ownership, blockchain storage, torrent technology"
+        url="https://codexdesktop.com/about"
+        image="https://codexdesktop.com/codexdesktop-og.png"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About CodexDesktop",
+          "description": "Learn about CodexDesktop's mission to revolutionize file storage with Web3 technology, military-grade encryption, and decentralized networks.",
+          "url": "https://codexdesktop.com/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "CodexDesktop",
+            "url": "https://codexdesktop.com",
+            "logo": "https://codexdesktop.com/logo.png",
+            "description": "CodexDesktop revolutionizes how you store, share, and manage files with cutting-edge Web3 technology and military-grade security.",
+            "foundingDate": "2024",
+            "applicationCategory": "File Storage Software",
+            "sameAs": [
+              "https://github.com/hackyguru/codex-desktop"
+            ]
+          }
+        }}
+      />
+      <div className="h-screen max-h-screen bg-black overflow-hidden relative">
+        {/* Hexagon Background */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
         <Squares
           direction="diagonal"
@@ -74,8 +103,11 @@ export default function About() {
             <div className="hidden md:flex items-center">
               <button
                 onClick={handleDownload}
-                className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+                className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-4 py-2 rounded-lg text-sm font-semibold transition-colors flex items-center gap-2 whitespace-nowrap"
               >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
                 Download for macOS
               </button>
             </div>
@@ -112,9 +144,12 @@ export default function About() {
                 </button>
                 <button
                   onClick={handleDownload}
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-4 py-2 rounded-lg text-sm font-semibold transition-colors flex items-center gap-2 whitespace-nowrap"
                 >
-                  Download for macOS
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    Download for macOS
                 </button>
               </div>
             </div>
@@ -235,8 +270,11 @@ export default function About() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
                       onClick={handleDownload}
-                      className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25"
+                      className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap"
                     >
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                      </svg>
                       Download for macOS
                     </button>
                     <Link
@@ -252,6 +290,7 @@ export default function About() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 } 
