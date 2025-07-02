@@ -5,12 +5,8 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* Font preloading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
-          rel="stylesheet"
-        />
         
         {/* Global SEO Meta Tags - Page specific ones are handled by SEO component */}
         <meta charSet="utf-8" />
@@ -28,7 +24,7 @@ export default function Document() {
         {/* Apple Web App Configuration */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="CodexDesktop" />
+        <meta name="apple-mobile-web-app-title" content="Codex Desktop" />
         
         {/* Microsoft Tile Configuration */}
         <meta name="msapplication-TileColor" content="#6BE4A8" />

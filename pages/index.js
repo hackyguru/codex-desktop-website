@@ -4,23 +4,11 @@ import Link from "next/link";
 import Squares from "../components/Squares";
 import CardSwap, { Card } from "../components/CardSwap";
 import SEO from "../components/SEO";
+import Header from "../components/Header";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedMilestone, setSelectedMilestone] = useState(0);
-
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleAbout = () => {
-    console.log("About clicked");
-  };
-
-  const handleJoinCommunity = () => {
-    console.log("Join Community clicked");
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,8 +90,8 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="CodexDesktop - Decentralized File Storage with Web3 Technology"
-        description="Experience lightning-fast file storage with military-grade encryption. CodexDesktop combines torrent technology with Web3 for secure, decentralized file management on macOS. Now available for beta download."
+        title="Codex Desktop - Decentralized File Storage with Web3 Technology"
+        description="Experience lightning-fast file storage with military-grade encryption. Codex Desktop combines torrent technology with Web3 for secure, decentralized file management on macOS. Now available for beta download."
         keywords="decentralized storage, web3, torrent, file storage, encryption, macOS, blockchain, peer-to-peer, privacy, secure storage, codex desktop, torrent client, distributed storage, web3 storage"
         url="https://codexdesktop.com"
         image="https://codexdesktop.com/codexdesktop-og.png"
@@ -111,8 +99,8 @@ export default function Home() {
         structuredData={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          "name": "CodexDesktop",
-          "description": "Experience lightning-fast file storage with military-grade encryption. CodexDesktop combines torrent technology with Web3 for secure, decentralized file management on macOS.",
+          "name": "Codex Desktop",
+          "description": "Experience lightning-fast file storage with military-grade encryption. Codex Desktop combines torrent technology with Web3 for secure, decentralized file management on macOS.",
           "url": "https://codexdesktop.com",
           "image": "https://codexdesktop.com/codexdesktop-og.png",
           "applicationCategory": "UtilityApplication",
@@ -124,7 +112,7 @@ export default function Home() {
           },
           "publisher": {
             "@type": "Organization",
-            "name": "CodexDesktop",
+            "name": "Codex Desktop",
             "url": "https://codexdesktop.com",
             "logo": "https://codexdesktop.com/logo.png"
           },
@@ -165,148 +153,7 @@ export default function Home() {
               </div>
 
       {/* Header */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/80 backdrop-blur-md border-b border-gray-800/50' 
-          : 'bg-black/20 backdrop-blur-sm'
-      }`}>
-        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
-          isScrolled ? 'py-2' : 'py-0'
-        }`}>
-          <div className={`flex justify-between items-center transition-all duration-300 ${
-            isScrolled ? 'h-14' : 'h-16 sm:h-20'
-          }`}>
-            {/* Left Side - Logo (Mobile) & About/Join Community (Desktop) */}
-            <div className="flex items-center space-x-6">
-              {/* Mobile Logo */}
-              <div className="md:hidden">
-                <Link href="/">
-                  <Image
-                    src="/logo.png"
-                    alt="CodexDesktop"
-                    width={180}
-                    height={40}
-                    className={`w-auto cursor-pointer transition-all duration-300 ${
-                      isScrolled ? 'h-6' : 'h-8'
-                    }`}
-                    priority
-                  />
-                </Link>
-              </div>
-              
-              {/* Desktop Navigation Links */}
-              <div className="hidden md:flex items-center space-x-6">
-                <Link
-                  href="/about"
-                  className="text-gray-300 hover:text-[#6BE4A8] text-sm font-medium transition-colors"
-                >
-                  About
-                </Link>
-                <button
-                  onClick={handleJoinCommunity}
-                  className="text-gray-300 hover:text-[#6BE4A8] text-sm font-medium transition-colors"
-                >
-                  Join Community
-                </button>
-              </div>
-            </div>
-
-            {/* Center - Logo (Desktop only) */}
-            <div className="hidden md:flex flex-1 justify-center">
-              <Link href="/">
-                <Image
-                  src="/logo.png"
-                  alt="CodexDesktop"
-                  width={180}
-                  height={40}
-                  className={`w-auto cursor-pointer transition-all duration-300 ${
-                    isScrolled ? 'h-6 sm:h-8' : 'h-8 sm:h-10'
-                  }`}
-                  priority
-                />
-              </Link>
-            </div>
-
-            {/* Right Side - Download Button (Desktop) & Mobile Menu Button */}
-            <div className="flex items-center">
-                             {/* Desktop Download Button */}
-               <div className="hidden md:flex items-center">
-                 <a
-                   href="https://github.com/hackyguru/codex-desktop/releases"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-4 py-2 rounded-lg text-sm font-semibold transition-colors flex items-center gap-2 whitespace-nowrap"
-                 >
-                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                   </svg>
-                   Download for macOS
-                 </a>
-               </div>
-
-              {/* Mobile menu button */}
-              <div className="md:hidden">
-                <button
-                  onClick={handleMenuToggle}
-                  className="text-gray-300 hover:text-[#6BE4A8] p-2 rounded-md"
-                  aria-label="Toggle menu"
-                >
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-full bg-black/95 backdrop-blur-md z-[60] flex flex-col justify-center items-center">
-              <div className="flex flex-col space-y-8 text-center">
-                <Link
-                  href="/about"
-                  className="text-gray-300 hover:text-[#6BE4A8] text-2xl font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </Link>
-                <button
-                  onClick={() => {
-                    handleJoinCommunity();
-                    setIsMenuOpen(false);
-                  }}
-                  className="text-gray-300 hover:text-[#6BE4A8] text-2xl font-medium transition-colors"
-                >
-                  Join Community
-                </button>
-                <a
-                  href="https://github.com/hackyguru/codex-desktop/releases"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-xl font-semibold transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
-                >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                  </svg>
-                  Download for macOS
-                </a>
-              </div>
-              
-              {/* Close button */}
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="absolute top-6 right-6 text-gray-300 hover:text-[#6BE4A8] p-2"
-                aria-label="Close menu"
-              >
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          )}
-        </div>
-      </header>
+      <Header currentPage="home" isScrolled={isScrolled} />
 
       {/* Hero Section */}
       <section className="pt-32 sm:pt-36 md:pt-40 lg:pt-44 h-screen relative z-10 p-2 sm:p-4 md:p-6 lg:p-8">
@@ -320,7 +167,7 @@ export default function Home() {
                   <span className="mr-1 sm:mr-2">🚀</span>
                   Now available for macOS Silicon
                 </div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight" style={{ fontFamily: "'Jersey 25', Arial, Helvetica, sans-serif" }}>
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                   Imagine a torrent powered with
                   <span className="text-[#6BE4A8]">{" "}decentralized storage</span>
                 </h1>
@@ -331,20 +178,22 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col gap-3 sm:gap-4 relative z-20">
-                <a
-                  href="https://github.com/hackyguru/codex-desktop/releases"
-                  target="_blank"
+                <Link href="/download-macos">
+                  <div className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    Download for macOS
+                  </div>
+                </Link>
+                <a 
+                  href="https://youtu.be/JADZo-7MEVQ" 
+                  target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap"
+                  className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 bg-transparent inline-flex items-center justify-center"
                 >
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                  </svg>
-                  Download for macOS
-                </a>
-                <button className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 bg-transparent">
                   Watch Demo
-                </button>
+                </a>
               </div>
             </div>
             
@@ -458,7 +307,7 @@ export default function Home() {
                   <span className="mr-1 sm:mr-2">🚀</span>
                   Now available for macOS Silicon
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight" style={{ fontFamily: "'Jersey 25', Arial, Helvetica, sans-serif" }}>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
                   Imagine a torrent powered with
                   <span className="text-[#6BE4A8]">{" "}decentralized storage</span>
                 </h1>
@@ -469,20 +318,22 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 relative z-20">
-                <a
-                  href="https://github.com/hackyguru/codex-desktop/releases"
-                  target="_blank"
+                <Link href="/download-macos">
+                  <div className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    Download for macOS
+                  </div>
+                </Link>
+                <a 
+                  href="https://youtu.be/JADZo-7MEVQ" 
+                  target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap"
+                  className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 bg-transparent inline-flex items-center justify-center"
                 >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                  </svg>
-                  Download for macOS
-                </a>
-                <button className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 bg-transparent">
                   Watch Demo
-                </button>
+                </a>
               </div>
             </div>
 
@@ -610,8 +461,8 @@ export default function Home() {
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl border border-gray-600/30">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="CodexStorage Demo"
+                    src="https://www.youtube.com/embed/JADZo-7MEVQ"
+                    title="Codex Desktop Demo"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

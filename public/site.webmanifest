@@ -1,7 +1,7 @@
 {
-  "name": "CodexDesktop - Decentralized File Storage",
-  "short_name": "CodexDesktop",
-  "description": "Experience lightning-fast file storage with military-grade encryption. CodexDesktop combines torrent technology with Web3 for secure, decentralized file management on macOS.",
+  "name": "Codex Desktop - Decentralized File Storage",
+  "short_name": "Codex Desktop",
+  "description": "Experience lightning-fast file storage with military-grade encryption. Codex Desktop combines torrent technology with Web3 for secure, decentralized file management on macOS.",
   "icons": [
     {
       "src": "/favicon.ico",

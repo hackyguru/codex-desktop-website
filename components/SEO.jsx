@@ -13,7 +13,7 @@ const SEO = ({
   section,
   tags,
   locale = "en_US",
-  siteName = "CodexDesktop",
+  siteName = "Codex Desktop",
   twitterHandle = "@CodexDesktop",
   structuredData
 }) => {
@@ -23,7 +23,7 @@ const SEO = ({
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "CodexDesktop",
+            "name": "Codex Desktop",
     "description": description,
     "url": url,
     "image": image,
@@ -36,7 +36,7 @@ const SEO = ({
     },
     "publisher": {
       "@type": "Organization",
-      "name": "CodexDesktop",
+      "name": "Codex Desktop",
       "url": url
     },
     "softwareVersion": "Beta",
@@ -116,8 +116,17 @@ const SEO = ({
       <link rel="dns-prefetch" href="//youtube.com" />
       
       {/* Preload critical resources */}
-      <link rel="preload" href="/logo.png" as="image" />
-      <link rel="preload" href="/codexdesktop-og.png" as="image" />
+      <link rel="preload" href="/logo.png" as="image" type="image/png" />
+      <link rel="preload" href="/codexdesktop-og.png" as="image" type="image/png" />
+      
+      {/* Prevent layout shift for logo */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          img[src="/logo.png"] {
+            aspect-ratio: 180 / 40;
+          }
+        `
+      }} />
       
       {/* Structured Data */}
       <script
