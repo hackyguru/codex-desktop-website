@@ -154,7 +154,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 lg:pt-36 min-h-screen relative z-10 p-2 sm:p-4 md:p-6 lg:p-8">
-        <div className="w-full min-h-[calc(100vh-12rem)] relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden">
+        <div className="w-full md:min-h-[calc(100vh-12rem)] relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden">
           {/* Content Section */}
           <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 pb-48 sm:pb-60 md:pb-72 lg:pb-16 h-full flex flex-col justify-center">
             <div className="max-w-2xl lg:max-w-3xl xl:max-w-4xl lg:pr-96 xl:pr-80">
@@ -205,43 +205,7 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Mobile - Single Card */}
-          <div className="absolute bottom-4 left-4 right-4 z-0 flex justify-center lg:hidden">
-            <div className="relative scale-45 sm:scale-55 md:scale-65 origin-bottom">
-              <div className="w-[900px] h-[600px] border-[#6BE4A8]/30 bg-black rounded-lg shadow-2xl overflow-hidden">
-                <div className="w-full h-full flex flex-col">
-                  {/* macOS Window Header */}
-                  <div className="flex items-center px-4 py-3 bg-black border-b border-[#6BE4A8]/30">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 rounded-full bg-[#ff5f57] hover:bg-[#ff5f57]/80 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-[#ffbd2e] hover:bg-[#ffbd2e]/80 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-[#28ca42] hover:bg-[#28ca42]/80 transition-colors"></div>
-                    </div>
-                  </div>
-                  {/* Window Content */}
-                  <div className="flex-1 relative">
-                    <Image
-                      src="/screenshot1.png"
-                      alt="CodexStorage App Interface Screenshot 1"
-                      width={900}
-                      height={600}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                  </div>
-                  {/* Bottom Info Bar */}
-                  <div className="px-4 py-3 bg-[#1a1a1a] border-t border-[#6BE4A8]/30">
-                    <div className="text-white">
-                      <h3 className="text-lg font-bold mb-1 text-[#6BE4A8]">Secure Storage</h3>
-                      <p className="text-gray-300 text-xs">
-                        Military-grade encryption keeps your files safe and secure.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
 
           {/* Desktop - CardSwap */}
           <div className="absolute bottom-0 right-0 z-0 scale-100 origin-bottom-right hidden lg:block">
