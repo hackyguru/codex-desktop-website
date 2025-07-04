@@ -53,7 +53,7 @@ export default function DownloadMacOS() {
           </h2>
           
           <p className="text-gray-300 text-lg mb-2">
-            Your download starts automatically. If it didn't start, 
+            Your download starts automatically. If it did not start, 
             <button 
               onClick={handleManualDownload}
               className="text-[#6BE4A8] hover:text-[#5DD494] underline ml-1 transition-colors"

@@ -394,7 +394,7 @@ export default function Home() {
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-white mb-2">Frictionless UX</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      You don't have to be a techie to use Codex Desktop - it's designed for people, not just for the nerds. Escape the terminal and run your Codex node with just a single click!
+                      You dont have to be a techie to use Codex Desktop - designed for people, not just for the nerds. Escape the terminal and run your Codex node with just a single click!
                     </p>
                   </div>
                 </div>
@@ -486,7 +486,7 @@ export default function Home() {
                 <div className="relative z-10 flex-1">
                   <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Evolve</h3>
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                    Web3 is not just about decentralization, it's about evolution. Checkout the other projects in the Logos ecosystem.
+                    Web3 is not just about decentralizatio but evolution. Checkout the other projects in the Logos ecosystem.
                   </p>
                 </div>
                 <div className="relative z-10 mt-auto">
