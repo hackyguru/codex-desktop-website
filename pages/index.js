@@ -23,66 +23,63 @@ export default function Home() {
   const milestones = [
     {
       id: 0,
-      quarter: "Q1 2024",
-      title: "macOS Beta Launch",
-      status: "COMPLETED",
+      quarter: "Q3 2025",
+      title: "Alpha Launch & Alturistic Mode",
+      status: "IN PROGRESS",
       statusColor: "text-[#6BE4A8]",
       dotColor: "bg-[#6BE4A8]",
-      description: "Initial release with core torrent functionality, Web3 integration, and military-grade encryption.",
+      description: "The inception of Codex Desktop - enabling the Codex testnet experience outside the terminal.",
       features: [
-        "Core torrent protocol implementation",
-        "Web3 blockchain integration",
-        "Military-grade AES-256 encryption",
-        "Native macOS interface",
-        "Basic file management"
+        "Launched as Guru's hobby project",
+        "Support for macOS Silicon",
+        "Support for macOS Intel",
+        "Support for Linux",
+        "Support for Windows",
+        "Alturistic p2p functionalities with Codex Testnet"
       ]
     },
     {
       id: 1,
-      quarter: "Q2 2024",
-      title: "Advanced Features",
-      status: "IN PROGRESS",
-      statusColor: "text-yellow-400",
-      dotColor: "bg-yellow-400",
-      description: "Smart sync, collaborative folders, enhanced privacy controls, and performance optimizations.",
+      quarter: "Q4 2025",
+      title: "Incentivized Testnet",
+      status: "PLANNED",
+      statusColor: "text-gray-500",
+      dotColor: "bg-gray-500",
+      description: "With the incentivized testnet, you can purchase storage space to persist your files on the Codex Testnet.",
       features: [
-        "Smart synchronization across devices",
-        "Collaborative folder sharing",
-        "Enhanced privacy controls",
-        "Performance optimizations",
-        "Advanced search capabilities"
+        "Decentralized persistence with Codex Testnet",
+        "Storage incentivization",
+        "Basic Access controls",
+        "Integration with pinning services"
       ]
     },
     {
       id: 2,
-      quarter: "Q3 2024",
+      quarter: "Q1 2026",
       title: "Cross-Platform Support",
       status: "PLANNED",
       statusColor: "text-gray-500",
       dotColor: "bg-gray-500",
-      description: "Windows and Linux versions with full feature parity and seamless cross-platform sync.",
+      description: "Cross-platform support for multiple devices with enhanced access control capabilities.",
       features: [
-        "Windows desktop application",
-        "Linux desktop application",
-        "Cross-platform synchronization",
-        "Universal file format support",
-        "Platform-specific optimizations"
+        "Codex Mobile (iOS/Android)",
+        "Smart sync with multiple devices",
+        "Storage provider incentives",
+        "Improved access controls",
       ]
     },
     {
       id: 3,
-      quarter: "Q4 2024",
-      title: "Enterprise & Mobile",
+      quarter: "Q2 2026",
+      title: "Mainnet",
       status: "PLANNED",
       statusColor: "text-gray-500",
       dotColor: "bg-gray-500",
-      description: "Enterprise dashboard, team management, iOS/Android companion apps, and API access.",
+      description: "The dream mainnet integration with Codex",
       features: [
-        "Enterprise management dashboard",
-        "Team collaboration tools",
-        "iOS companion app",
-        "Android companion app",
-        "REST API for developers"
+        "Mainnet integration with Codex",
+        "Storage provider incentives",
+        "Improved file sharing controls",
       ]
     }
   ];
@@ -156,189 +153,88 @@ export default function Home() {
       <Header currentPage="home" isScrolled={isScrolled} />
 
       {/* Hero Section */}
-      <section className="pt-32 sm:pt-36 md:pt-40 lg:pt-44 h-screen relative z-10 p-2 sm:p-4 md:p-6 lg:p-8">
-        <div className="w-full h-full relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden">
-          {/* Mobile Layout - Stack Content */}
-          <div className="lg:hidden flex flex-col h-full min-h-[600px]">
-            {/* Mobile Content */}
-            <div className="flex-1 p-6 sm:p-8 flex flex-col justify-center">
-              <div className="mb-6 sm:mb-8">
-                <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#6BE4A8]/10 text-[#6BE4A8] text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-[#6BE4A8]/20">
-                  <span className="mr-1 sm:mr-2">🚀</span>
-                  Now available for macOS Silicon
-                </div>
-                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-                  Imagine a torrent powered with
-                  <span className="text-[#6BE4A8]">{" "}decentralized storage</span>
-                </h1>
-                <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-6 sm:mb-8">
-                  Experience lightning-fast file storage with military-grade encryption. 
-                  Built specifically for macOS with native performance and seamless integration.
-                </p>
+      <section className="pt-24 sm:pt-28 md:pt-32 lg:pt-36 min-h-screen relative z-10 p-2 sm:p-4 md:p-6 lg:p-8">
+        <div className="w-full min-h-[calc(100vh-12rem)] relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden">
+          {/* Content Section */}
+          <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 pb-48 sm:pb-60 md:pb-72 lg:pb-16 h-full flex flex-col justify-center">
+            <div className="max-w-2xl lg:max-w-3xl xl:max-w-4xl lg:pr-96 xl:pr-80">
+              <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#6BE4A8]/10 text-[#6BE4A8] text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-[#6BE4A8]/20">
+                <span className="mr-1 sm:mr-2">🚀</span>
+                Alpha available for macOS Silicon
               </div>
               
-              <div className="flex flex-col gap-3 sm:gap-4 relative z-20">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 sm:mb-6 lg:mb-8 leading-tight">
+                Ever imagined a torrent powered with
+                <span className="text-[#6BE4A8]">{" "}decentralized storage?</span>
+              </h1>
+              
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
+               Codex Desktop is similar to a torrent client but on steroids - it's censorship resistant, fast and decentralized with the power of Codex Storage.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6">
                 <Link href="/download-macos">
-                  <div className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer">
+                  <div className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer">
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                     </svg>
                     Download for macOS
                   </div>
                 </Link>
+                
                 <a 
                   href="https://youtu.be/JADZo-7MEVQ" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 bg-transparent inline-flex items-center justify-center"
+                  className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold transition-all transform hover:scale-105 bg-transparent inline-flex items-center justify-center"
                 >
                   Watch Demo
                 </a>
               </div>
             </div>
-            
-            {/* Mobile CardSwap - Smaller and Bottom */}
-            <div className="flex-shrink-0 h-64 sm:h-80 relative z-0">
-              <CardSwap
-                width={350}
-                height={250}
-                cardDistance={60}
-                verticalDistance={70}
-                delay={4000}
-                pauseOnHover={true}
-              >
-                <Card className="border-[#6BE4A8]/30 bg-black p-0 shadow-2xl overflow-hidden">
-                  <div className="w-full h-full flex flex-col">
-                    <div className="flex items-center px-3 py-2 bg-black border-b border-[#6BE4A8]/30">
-                      <div className="flex items-center space-x-1.5">
-                        <div className="w-2 h-2 rounded-full bg-[#ff5f57]"></div>
-                        <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
-                        <div className="w-2 h-2 rounded-full bg-[#28ca42]"></div>
-                      </div>
-                    </div>
-                    <div className="flex-1 relative">
-                      <Image
-                        src="/screenshot1.png"
-                        alt="CodexStorage App Interface Screenshot 1"
-                        width={350}
-                        height={200}
-                        className="w-full h-full object-cover"
-                        priority
-                      />
-                    </div>
-                    <div className="px-3 py-2 bg-[#1a1a1a] border-t border-[#6BE4A8]/30">
-                      <div className="text-white">
-                        <h3 className="text-sm font-bold mb-1 text-[#6BE4A8]">Secure Storage</h3>
-                        <p className="text-gray-300 text-xs">
-                          Military-grade encryption keeps your files safe.
-                        </p>
-                      </div>
+          </div>
+          
+          {/* Mobile - Single Card */}
+          <div className="absolute bottom-4 left-4 right-4 z-0 flex justify-center lg:hidden">
+            <div className="relative scale-45 sm:scale-55 md:scale-65 origin-bottom">
+              <div className="w-[900px] h-[600px] border-[#6BE4A8]/30 bg-black rounded-lg shadow-2xl overflow-hidden">
+                <div className="w-full h-full flex flex-col">
+                  {/* macOS Window Header */}
+                  <div className="flex items-center px-4 py-3 bg-black border-b border-[#6BE4A8]/30">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-[#ff5f57] hover:bg-[#ff5f57]/80 transition-colors"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#ffbd2e] hover:bg-[#ffbd2e]/80 transition-colors"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#28ca42] hover:bg-[#28ca42]/80 transition-colors"></div>
                     </div>
                   </div>
-                </Card>
-                <Card className="border-[#6BE4A8]/30 bg-black p-0 shadow-2xl overflow-hidden">
-                  <div className="w-full h-full flex flex-col">
-                    <div className="flex items-center px-3 py-2 bg-black border-b border-[#6BE4A8]/30">
-                      <div className="flex items-center space-x-1.5">
-                        <div className="w-2 h-2 rounded-full bg-[#ff5f57]"></div>
-                        <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
-                        <div className="w-2 h-2 rounded-full bg-[#28ca42]"></div>
-                      </div>
-                    </div>
-                    <div className="flex-1 relative">
-                      <Image
-                        src="/screenshot2.png"
-                        alt="CodexStorage App Interface Screenshot 2"
-                        width={350}
-                        height={200}
-                        className="w-full h-full object-cover"
-                        priority
-                      />
-                    </div>
-                    <div className="px-3 py-2 bg-[#1a1a1a] border-t border-[#6BE4A8]/30">
-                      <div className="text-white">
-                        <h3 className="text-sm font-bold mb-1 text-[#6BE4A8]">Web3 Powered</h3>
-                        <p className="text-gray-300 text-xs">
-                          Built on decentralized technology.
-                        </p>
-                      </div>
+                  {/* Window Content */}
+                  <div className="flex-1 relative">
+                    <Image
+                      src="/screenshot1.png"
+                      alt="CodexStorage App Interface Screenshot 1"
+                      width={900}
+                      height={600}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                  </div>
+                  {/* Bottom Info Bar */}
+                  <div className="px-4 py-3 bg-[#1a1a1a] border-t border-[#6BE4A8]/30">
+                    <div className="text-white">
+                      <h3 className="text-lg font-bold mb-1 text-[#6BE4A8]">Secure Storage</h3>
+                      <p className="text-gray-300 text-xs">
+                        Military-grade encryption keeps your files safe and secure.
+                      </p>
                     </div>
                   </div>
-                </Card>
-                <Card className="border-[#6BE4A8]/30 bg-black p-0 shadow-2xl overflow-hidden">
-                  <div className="w-full h-full flex flex-col">
-                    <div className="flex items-center px-3 py-2 bg-black border-b border-[#6BE4A8]/30">
-                      <div className="flex items-center space-x-1.5">
-                        <div className="w-2 h-2 rounded-full bg-[#ff5f57]"></div>
-                        <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
-                        <div className="w-2 h-2 rounded-full bg-[#28ca42]"></div>
-                      </div>
-                    </div>
-                    <div className="flex-1 relative">
-                      <Image
-                        src="/screenshot3.png"
-                        alt="CodexStorage App Interface Screenshot 3"
-                        width={350}
-                        height={200}
-                        className="w-full h-full object-cover"
-                        priority
-                      />
-                    </div>
-                    <div className="px-3 py-2 bg-[#1a1a1a] border-t border-[#6BE4A8]/30">
-                      <div className="text-white">
-                        <h3 className="text-sm font-bold mb-1 text-[#6BE4A8]">Lightning Fast</h3>
-                        <p className="text-gray-300 text-xs">
-                          Optimized for macOS performance.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </CardSwap>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Desktop Layout - Original Side by Side */}
-          <div className="hidden lg:block h-full">
-            {/* Desktop Content */}
-            <div className="absolute top-0 left-0 p-8 sm:p-12 md:p-16 lg:p-20 max-w-3xl text-left">
-              <div className="mb-4 sm:mb-6 md:mb-8">
-                <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#6BE4A8]/10 text-[#6BE4A8] text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-[#6BE4A8]/20">
-                  <span className="mr-1 sm:mr-2">🚀</span>
-                  Now available for macOS Silicon
-                </div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
-                  Imagine a torrent powered with
-                  <span className="text-[#6BE4A8]">{" "}decentralized storage</span>
-                </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 md:mb-10">
-                  Experience lightning-fast file storage with military-grade encryption. 
-                  Built specifically for macOS with native performance and seamless integration.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 relative z-20">
-                <Link href="/download-macos">
-                  <div className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#6BE4A8]/25 flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                    </svg>
-                    Download for macOS
-                  </div>
-                </Link>
-                <a 
-                  href="https://youtu.be/JADZo-7MEVQ" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="border border-[#6BE4A8]/30 hover:border-[#6BE4A8] text-[#6BE4A8] px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 bg-transparent inline-flex items-center justify-center"
-                >
-                  Watch Demo
-                </a>
-              </div>
-            </div>
-
-            {/* Desktop CardSwap Component */}
-            <div className="absolute bottom-0 right-0 w-1/2 h-full z-0">
+          {/* Desktop - CardSwap */}
+          <div className="absolute bottom-0 right-0 z-0 scale-100 origin-bottom-right hidden lg:block">
+            <div className="relative">
               <CardSwap
                 width={900}
                 height={600}
@@ -472,7 +368,7 @@ export default function Home() {
             </div>
 
                           {/* Right Column - Feature Cards */}
-            <div className="flex flex-col h-full justify-between">
+            <div className="flex flex-col h-full space-y-4 sm:space-y-6 lg:space-y-0 lg:justify-between">
               
               {/* Feature 1 - Security */}
               <div className="w-full relative bg-[#0a0a0a] rounded-3xl border border-gray-800/50 overflow-hidden p-6 sm:p-8">
@@ -481,10 +377,9 @@ export default function Home() {
                     <span className="text-2xl">🔒</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-white mb-2">Military-Grade Security</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">Power to the people with p2p</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Your files are encrypted with AES-256 encryption before leaving your device. 
-                      Only you hold the keys to decrypt your data.
+                      Escape the hyperscalers and centralized storage providers. Use a decentralized storage network that puts the power back to the hands of people and not shady custodians.
                     </p>
                   </div>
                 </div>
@@ -497,10 +392,9 @@ export default function Home() {
                     <span className="text-2xl">🌐</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-white mb-2">Web3 Powered</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">Frictionless UX</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Built on decentralized technology for true ownership of your data. 
-                      Experience the future of file storage with blockchain integration.
+                      You don't have to be a techie to use Codex Desktop - it's designed for people, not just for the nerds. Escape the terminal and run your Codex node with just a single click!
                     </p>
                   </div>
                 </div>
@@ -513,10 +407,9 @@ export default function Home() {
                     <span className="text-2xl">⚡</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-white mb-2">Lightning Fast</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">Open source</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Optimized for macOS with native performance. Upload and download files 
-                      at incredible speeds using advanced torrent protocols.
+                      With a vision to make data sharing and storage cheaper without compromising on decentralization, Codex is open source and free to use in Alturustic mode.
                     </p>
                   </div>
                 </div>
@@ -536,12 +429,17 @@ export default function Home() {
             
             {/* Feature 1 - Decentralized Intelligence */}
             <div className="w-full relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden h-72 sm:h-80">
-              <div className="p-6 sm:p-8 hover:border-[#6BE4A8]/30 transition-all duration-300 relative overflow-hidden group h-full">
-                <div className="relative z-10">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Decentralized Intelligence</h3>
+              <div className="p-6 sm:p-8 hover:border-[#6BE4A8]/30 transition-all duration-300 relative overflow-hidden group h-full flex flex-col">
+                <div className="relative z-10 flex-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Contribute</h3>
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                    Powered by a mix of purpose-built and frontier protocols, CodexStorage is smart and fast.
+                    Codex Desktop is fueled with the power of the Open Source community. Your contributions are welcome!
                   </p>
+                </div>
+                <div className="relative z-10 mt-auto">
+                  <a href="https://github.com/hackyguru/codex-desktop/" target="_blank" rel="noopener noreferrer" className="bg-[#6BE4A8]/10 hover:bg-[#6BE4A8]/20 text-[#6BE4A8] border border-[#6BE4A8]/30 hover:border-[#6BE4A8]/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
+                    GitHub
+                  </a>
                 </div>
                 
                 {/* Abstract Geometric Illustration */}
@@ -558,12 +456,17 @@ export default function Home() {
 
             {/* Feature 2 - Feels Familiar */}
             <div className="w-full relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden h-72 sm:h-80">
-              <div className="p-6 sm:p-8 hover:border-[#6BE4A8]/30 transition-all duration-300 relative overflow-hidden group h-full">
-                <div className="relative z-10">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Feels Familiar</h3>
+              <div className="p-6 sm:p-8 hover:border-[#6BE4A8]/30 transition-all duration-300 relative overflow-hidden group h-full flex flex-col">
+                <div className="relative z-10 flex-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Join the Community</h3>
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                    Import all your files, folders, and preferences in one click.
+                    Your feedback is important to us. Join the conversation in #codex-desktop channel in the Codex Discord. 
                   </p>
+                </div>
+                <div className="relative z-10 mt-auto">
+                  <a href="https://discord.gg/codex-storage" target="_blank" rel="noopener noreferrer" className="bg-[#6BE4A8]/10 hover:bg-[#6BE4A8]/20 text-[#6BE4A8] border border-[#6BE4A8]/30 hover:border-[#6BE4A8]/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
+                    Join Discord
+                  </a>
                 </div>
                 
                 {/* Cube/Block Illustration */}
@@ -579,12 +482,17 @@ export default function Home() {
 
             {/* Feature 3 - Privacy Options */}
             <div className="w-full relative bg-[#0a0a0a] rounded-2xl sm:rounded-3xl border border-gray-800/50 overflow-hidden h-72 sm:h-80">
-              <div className="p-6 sm:p-8 hover:border-[#6BE4A8]/30 transition-all duration-300 relative overflow-hidden group h-full">
-                <div className="relative z-10">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Privacy Options</h3>
+              <div className="p-6 sm:p-8 hover:border-[#6BE4A8]/30 transition-all duration-300 relative overflow-hidden group h-full flex flex-col">
+                <div className="relative z-10 flex-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Evolve</h3>
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                    If you enable Privacy Mode, your files are never stored remotely without your consent. CodexStorage is Web3 certified.
+                    Web3 is not just about decentralization, it's about evolution. Checkout the other projects in the Logos ecosystem.
                   </p>
+                </div>
+                <div className="relative z-10 mt-auto">
+                  <a href="https://logos.co" target="_blank" rel="noopener noreferrer" className="bg-[#6BE4A8]/10 hover:bg-[#6BE4A8]/20 text-[#6BE4A8] border border-[#6BE4A8]/30 hover:border-[#6BE4A8]/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
+                    Learn More
+                  </a>
                 </div>
                 
                 {/* Circular/Shield Illustration */}
@@ -601,12 +509,7 @@ export default function Home() {
 
           </div>
 
-          {/* Mobile See More Button */}
-          <div className="lg:hidden text-center mt-12 pointer-events-auto">
-            <button className="bg-[#6BE4A8] hover:bg-[#5DD494] text-black px-6 py-3 rounded-lg text-sm font-semibold transition-colors">
-              See more features
-            </button>
-          </div>
+
 
         </section>
 
@@ -619,11 +522,8 @@ export default function Home() {
                 {/* Header */}
                 <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4 leading-tight">
-                    What&apos;s Coming Next
+                    Roadmap
                   </h2>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
-                    Our roadmap for making CodexStorage the ultimate Web3 file storage solution
-                  </p>
                 </div>
 
                 {/* Interactive Roadmap */}
@@ -651,11 +551,7 @@ export default function Home() {
                               }`}
                             >
                               <div className="flex items-center justify-between mb-1 sm:mb-2 min-w-0">
-                                <span className={`text-xs sm:text-sm font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full flex-shrink-0 ${
-                                  milestone.status === 'COMPLETED' ? 'text-[#6BE4A8] bg-[#6BE4A8]/15' :
-                                  milestone.status === 'IN PROGRESS' ? 'text-yellow-400 bg-yellow-400/15' :
-                                  'text-gray-400 bg-gray-600/15'
-                                }`}>
+                                <span className={`text-xs sm:text-sm font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full flex-shrink-0 ${milestone.statusColor} bg-[#6BE4A8]/15`}>
                                   {milestone.quarter}
                                 </span>
                                 <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 ml-2">
@@ -681,11 +577,7 @@ export default function Home() {
                   <div className="lg:sticky lg:top-8 lg:self-start">
                     <div className="bg-[#151515] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-700/30">
                       <div className="flex items-center justify-between mb-4 sm:mb-6">
-                        <span className={`text-xs sm:text-sm font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full border ${
-                          milestones[selectedMilestone].status === 'COMPLETED' ? 'text-[#6BE4A8] bg-[#6BE4A8]/15 border-[#6BE4A8]/20' :
-                          milestones[selectedMilestone].status === 'IN PROGRESS' ? 'text-yellow-400 bg-yellow-400/15 border-yellow-400/20' :
-                          'text-gray-400 bg-gray-600/15 border-gray-600/20'
-                        }`}>
+                        <span className={`text-xs sm:text-sm font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full border ${milestones[selectedMilestone].statusColor} bg-[#6BE4A8]/15 border-[#6BE4A8]/20`}>
                           {milestones[selectedMilestone].quarter}
                         </span>
                         <div className="flex items-center space-x-1 sm:space-x-2">
@@ -705,7 +597,7 @@ export default function Home() {
                       </p>
                       
                       <div>
-                        <h3 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Key Features</h3>
+                        <h3 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Milestones</h3>
                         <ul className="space-y-2 sm:space-y-3">
                           {milestones[selectedMilestone].features.map((feature, index) => (
                             <li key={index} className="flex items-start space-x-2 sm:space-x-3">
@@ -745,8 +637,7 @@ export default function Home() {
                         className="h-10 w-auto mb-4"
                       />
                       <p className="text-gray-300 text-sm leading-relaxed max-w-md">
-                        The future of file storage is here. Experience lightning-fast torrent technology 
-                        powered by Web3 with military-grade encryption built specifically for macOS.
+                        Codex Desktop is an easy gateway to use the Alturistic capabilities of Codex similar to a torrent client. Get started today!
                       </p>
                     </div>
                     
@@ -773,28 +664,11 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Product Links */}
-                  <div>
-                    <h3 className="text-white font-semibold mb-4">Product</h3>
-                    <ul className="space-y-3">
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Features</a></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Security</a></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Pricing</a></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Roadmap</a></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Download</a></li>
-                    </ul>
-                  </div>
-
-                  {/* Company Links */}
-                  <div>
-                    <h3 className="text-white font-semibold mb-4">Company</h3>
-                    <ul className="space-y-3">
-                      <li><Link href="/about" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">About</Link></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Blog</a></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Careers</a></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Contact</a></li>
-                      <li><a href="#" className="text-gray-300 hover:text-[#6BE4A8] text-sm transition-colors">Support</a></li>
-                    </ul>
+                  {/* Quote Section */}
+                  <div className="md:col-span-2 flex items-center justify-center">
+                    <blockquote className="text-center text-sm sm:text-sm text-[#6BE4A8] max-w-2xl mx-auto px-4">
+                      “Decentralization is not a feature, it's a movement.”
+                    </blockquote>
                   </div>
 
                 </div>
@@ -803,12 +677,7 @@ export default function Home() {
                 <div className="pt-8 border-t border-gray-700/30">
                   <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                      © 2024 CodexStorage. All rights reserved.
-                    </div>
-                    <div className="flex space-x-6">
-                      <a href="#" className="text-gray-400 hover:text-[#6BE4A8] text-sm transition-colors">Privacy Policy</a>
-                      <a href="#" className="text-gray-400 hover:text-[#6BE4A8] text-sm transition-colors">Terms of Service</a>
-                      <a href="#" className="text-gray-400 hover:text-[#6BE4A8] text-sm transition-colors">Cookie Policy</a>
+                     This website is open sourced on <a href="https://github.com/hackyguru/codex-desktop-website" className="text-[#6BE4A8] hover:text-[#6BE4A8]/80 transition-colors">GitHub</a>.
                     </div>
                   </div>
                 </div>
