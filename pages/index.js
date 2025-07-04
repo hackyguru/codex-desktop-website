@@ -667,7 +667,7 @@ export default function Home() {
                   {/* Quote Section */}
                   <div className="md:col-span-2 flex items-center justify-center">
                     <blockquote className="text-center text-sm sm:text-sm text-[#6BE4A8] max-w-2xl mx-auto px-4">
-                      “Decentralization is not a feature, it's a movement.”
+                      "Decentralization is not a feature, it's a movement."
                     </blockquote>
                   </div>
 
