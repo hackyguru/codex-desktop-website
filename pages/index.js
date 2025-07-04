@@ -169,7 +169,7 @@ export default function Home() {
               </h1>
               
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
-               Codex Desktop is similar to a torrent client but on steroids - it's censorship resistant, fast and decentralized with the power of Codex Storage.
+               Codex Desktop is a torrent-styled desktop client that helps you run a Codex node & interact with the Alturistic p2p network with a single click - it's censorship resistant, fast and decentralized with the power of Codex Storage.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6">

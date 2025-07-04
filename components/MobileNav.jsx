@@ -38,17 +38,6 @@ export default function MobileNav({ isOpen, onClose, currentPage = "" }) {
       {/* Navigation */}
       <div className="flex-1 flex flex-col justify-center px-8 py-12 bg-black">
         <div className="flex flex-col space-y-8">
-          <Link
-            href="/about"
-            className={`text-3xl font-light transition-colors py-4 border-b hover:border-[#6BE4A8]/30 ${
-              currentPage === "about" 
-                ? "text-[#6BE4A8] border-[#6BE4A8]/30" 
-                : "text-gray-300 hover:text-white border-transparent"
-            }`}
-            onClick={onClose}
-          >
-            About
-          </Link>
           
           <button
             onClick={() => {

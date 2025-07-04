@@ -48,16 +48,6 @@ export default function Header({ currentPage = "", isScrolled = false }) {
             
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-6">
-              <Link
-                href="/about"
-                className={`text-sm font-medium transition-colors ${
-                  currentPage === "about" 
-                    ? "text-[#6BE4A8] hover:text-[#5DD494]" 
-                    : "text-gray-300 hover:text-[#6BE4A8]"
-                }`}
-              >
-                About
-              </Link>
               <button
                 onClick={handleJoinCommunity}
                 className="text-gray-300 hover:text-[#6BE4A8] text-sm font-medium transition-colors"
