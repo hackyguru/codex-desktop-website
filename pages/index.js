@@ -191,6 +191,17 @@ export default function Home() {
                   Watch Demo
                 </a>
               </div>
+              <div className="mt-8 flex justify-start sm:justify-start">
+                <a href="https://www.producthunt.com/products/codex-desktop?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-codex-desktop" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=988072&theme=dark&t=1751623474698"
+                    alt="Codex&#0032;Desktop - Torrent&#0032;style&#0032;desktop&#0032;app&#0032;powered&#0032;with&#0032;decentralised&#0032;storage | Product Hunt"
+                    style={{ width: '250px', height: '54px' }}
+                    width="250"
+                    height="54"
+                  />
+                </a>
+              </div>
             </div>
           </div>
           
