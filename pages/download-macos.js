@@ -218,7 +218,7 @@ export default function DownloadMacOS() {
           {/* Footer Links */}
           <div className="mt-16 text-center">
             <p className="text-gray-400 text-sm mb-4">
-              Now that Codex Desktop's up and running, check out the{" "}
+              Now that Codex Desktop is up and running, check out the{" "}
               <a 
                 href="https://youtu.be/JADZo-7MEVQ" 
                 target="_blank" 

@@ -169,7 +169,7 @@ export default function Home() {
               </h1>
               
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
-               Codex Desktop is a torrent-styled desktop client that helps you run a Codex node & interact with the Alturistic p2p network with a single click - it's censorship resistant, fast and decentralized with the power of Codex Storage.
+               Codex Desktop is a torrent-styled desktop client that helps you run a Codex node & interact with the Alturistic p2p network with a single click - censorship resistant, fast and decentralized with the power of Codex Storage.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6">
@@ -666,8 +666,8 @@ export default function Home() {
 
                   {/* Quote Section */}
                   <div className="md:col-span-2 flex items-center justify-center">
-                    <blockquote className="text-center text-sm sm:text-sm text-[#6BE4A8] max-w-2xl mx-auto px-4">
-                      "Decentralization is not a feature, it's a movement."
+                    <blockquote className="text-left sm:text-center text-sm sm:text-sm text-[#6BE4A8] max-w-2xl mx-auto px-4">
+                      &quot;Decentralization is not a feature, it&#39;s a movement.&quot;
                     </blockquote>
                   </div>
 
